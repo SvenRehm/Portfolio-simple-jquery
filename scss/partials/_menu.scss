@@ -1,0 +1,108 @@
+.menu-overlay {
+    display: none;
+    
+    
+    
+    &.closed{
+        display: none;
+        height: 100vh;
+        width: 100vw;
+        
+        //background: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 7;
+        display: grid;
+        
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-template-rows: repeat(12, minmax(0, 1fr));
+        
+    }
+
+    .menu-all{
+        
+        grid-row: 1/ -1;
+        grid-column: 4/ span 6;
+       margin: auto auto;
+        
+        ul:hover li {opacity: 0.5;}
+ul li:hover {opacity: 1;}
+
+        
+        ul{
+            list-style: none;
+            width: 100%;
+            margin: auto auto;
+            
+            
+            li,a
+            {
+                
+                text-transform: uppercase;
+                line-height: 60px;
+                font-size: 54px;
+                text-decoration: none;
+                color: black;
+                text-align: center;
+                margin-bottom: .3em;
+                font-family: $font-secondary;
+                font-weight: 700;
+                transition: all 150ms ease-in-out;
+                &::selection{
+                    color: white;
+                    background: rgb(56, 56, 56);
+                }
+                &:hover{
+                    color: rgb(105, 104, 104);
+
+                }
+                
+                }
+                li,a>.list-showing{
+                    opacity: 0;
+                    @for $i from 1 through 4{
+                        &:nth-child(#{$i}){
+                            animation-name: fadeInLi; //mixin
+                            animation-duration: 450ms;
+                            animation-delay:100ms*$i;
+                            animation-timing-function: ease-in-out;
+                            animation-fill-mode: forwards;
+                        }
+                       
+                    }
+                    
+                    
+                    
+                }
+
+            }
+        }
+        
+    }
+
+
+    @media  (max-width: 376px) {
+    .menu-overlay {
+        .menu-all{
+        
+            ul{
+                list-style: none;
+                width: 100%;
+                margin: auto auto;
+                
+                li,a
+                {
+                    text-transform: uppercase;
+                    line-height: 50px;
+                    font-size: 1.5em;
+                    
+                    margin-bottom: .3em;
+                    font-family: $font-secondary;
+                    font-weight: 700;
+                    
+                    }
+    }
+}
+}
+    }

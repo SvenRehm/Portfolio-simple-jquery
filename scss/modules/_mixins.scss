@@ -1,0 +1,29 @@
+
+
+@mixin container($width: 90%, $max-width: 50em) {
+  width: $width;
+  margin: 0 auto;
+  max-width: $max-width;
+}
+
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin mq($width: 50em) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin animation ($delay, $duration, $animation) {
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-name: $animation;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
