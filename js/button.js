@@ -7,6 +7,7 @@ var imCardtext =$(".img-card-text");
 var landingContact= $(".btn-about-me, .btn-footer");
 var openContact =$(".menu-item-4 a");
 var openPortfolio =$(".menu-item-2");
+var scrolltoSkills =$(".menu-item-5 a");
 
 
 $.fn.slideFadeToggle  = function(speed, easing, callback) {
@@ -80,6 +81,29 @@ $( document ).ready(function() {
   event.preventDefault();
 
 
+})
+openPortfolio.click(function(event){
+  button.toggleClass("opened");
+    listItems.toggleClass("list-showing");
+    $('.menu-overlay').toggleClass("closed");
+    imgCard.toggleClass("img-slideup")
+    $('.footer').toggleClass("hide");
+    $("#scroll").addClass("blur");
+    $('.landing').toggleClass("fadeout-landing");
+    imCardtext.removeClass("img-slideup");
+    $(".portfolio-heading").toggleClass("img-slideup");
+})
+scrolltoSkills.click(function(event){
+  
+  button.toggleClass("opened");
+    listItems.toggleClass("list-showing");
+    $('.menu-overlay').toggleClass("closed");
+    imgCard.toggleClass("img-slideup")
+    $('.footer').toggleClass("hide");
+    $("#scroll").addClass("blur");
+    $('.landing').toggleClass("fadeout-landing");
+    imCardtext.removeClass("img-slideup");
+    $(".portfolio-heading").toggleClass("img-slideup");
 })
 })
 

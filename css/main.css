@@ -86,8 +86,7 @@
 
 .grid {
   display: grid;
-  height: 98vh;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
+  height: 100vh;
   grid-template-rows: repeat(12, minmax(0, 1fr));
   opacity: 1;
   position: relative;
