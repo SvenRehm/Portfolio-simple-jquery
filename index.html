@@ -6,16 +6,19 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Sven Rehm | Portfolio</title>
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/viewScroller.css" />
+
   
-  <script src="jquery-3.3.1.js"></script>
+  
+ 
   
 
 
 </head>
 <body >
   
-  <div class="container">
-    <div class="bg-lines hidden">
+  
+   <div class="bg-lines hidden">
           <svg>
             <line x1="20%" y1="100%" x2="80%" y2="0"></line>
             <line x1="80%" y1="100%" x2="20%" y2="0"></line>
@@ -46,8 +49,8 @@
         <div class="menu-all">
           <ul class="menu-list">
             <li class="menu-item-1"><a href="">Home</a></li>
-            <li class="menu-item-2"><a href="">Portfolio</a></li>
-            <li class="menu-item-5"><a href="">Skills</a></li>
+            <li class="menu-item-2"><a href="#view-2" class="vs-anchor">Portfolio</a></li>
+            <li class="menu-item-5"><a href="#view-5" class="vs-anchor">Skills</a></li>
             <li class="menu-item-4"><a href="">Contact |  About</a></li>
            
           </ul>
@@ -136,7 +139,7 @@
     </div>
       <!---//contact-->
     </section>
-  </div>
+  
 
     <!---//-HEADER -->
     
@@ -144,9 +147,9 @@
    
     
     
-<div id="scroll">
-   <!---landing-->
-  <div  class="landing page" id="one">
+<div class="mainbag">
+   <!---landing-->  
+  <div  vs-anchor="view-1" class="mainview view1 landing " id="one">
     <div class="fullwidth-wrapper">
       
       <div class="landing-headings">
@@ -155,13 +158,14 @@
         <h3>I'm a Germany based web designer & frontend web developer with focus on designing clean and user friedly experiences </h2>
       </div>
       <div class="call-to-action">
-        <a class="btn btn-portfolio" href="#">My Work</a>
+        <a class="btn btn-portfolio vs-anchor" href="#view-2" >My Work</a>
           
         <a class="btn btn-about-me" href="">About me</a>
         <span class="scroll-btn">
-          <a class="scroll-icon"href="#">
+          <a class="scroll-icon vs-anchor" href="#view-2">
             <span class="mouse">
               <span>
+              
               </span>
             </span>
           </a>
@@ -172,10 +176,14 @@
    </div>
   </div>
 <!---//landing-->
-  <div class="scroll page" id="two">
+  <div  vs-anchor="view-2"  class="mainview view-2 page " id="two">
     <section class="grid">
         <p class="portfolio-heading">Portfolio</p>
-        <a  class="img-card" href="#"><img src="images/champion-akali-headhunter-splash.jpg" alt=""></a>
+      
+         <a  class="img-card" href="#"> 
+            <img src="images/champion-akali-headhunter-splash.jpg" alt="">
+         </a>
+      
         <div class="img-card-text">
           <h1 class="heading-imgtext"><a >Headline</a></h1>
           <h2 class="desctiption-link"><a class="desctiption-link" >Descriptionhfddfhdfg</a></h2>
@@ -183,7 +191,7 @@
       
     </section>
   </div>
-  <div class="scroll page" id="three">
+  <div  vs-anchor="view-3" class="mainview view-3  page" id="three">
       <section class="grid">
           
           <a  class="img-card" href=""><img src="images/champion-akali-headhunter-splash.jpg" alt=""></a>
@@ -196,7 +204,7 @@
       </section>
     </div>
 
-  <div class="scroll page" id="four">
+  <div vs-anchor="view-4"class="mainview view-4 page section" id="four">
     <section class="grid">
         
         <a  class="img-card" href="portfolio-1.html"><img src="images/champion-akali-headhunter-splash.jpg" alt=""></a>
@@ -209,7 +217,7 @@
   </div>
   <!---footer-->
 
-  <div  class="footer page" id="five">
+  <div vs-anchor="view-5" class="mainview view-5 footer section" id="five">
       <?xml version="1.0" ?><svg class="uparrow" enable-background="new 0 0 32 32" height="32px" id="svg2" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"><g id="background"><rect fill="none" height="32" width="32"/></g><g id="arrow_x5F_full_x5F_up"><polygon points="2,16 9.999,16 9.999,30 21.999,30 21.999,16 29.999,16 15.999,2  "/></g></svg>
     
 
@@ -369,11 +377,45 @@
 
 
   
-<script src="js/scrolling.js"></script> 
+<!----<script src="js/scrolling.js"></script> -->
+
+
+<script src="jquery-3.3.1.js"></script>
+<script src="jquery.mousewheel.min.js"></script>
+<script src="jquery.easing.min.js"></script>
+<script src="js/viewScroller.js"></script> 
 <script src="js/button.js"></script> 
 <script src="js/modal.js"></script> 
+
+
+<script>
+  $(document).ready(function () {
+
+      // Sets viewScroller with sample events
+      $('.mainbag').viewScroller({
     
- 
+      });
+      $('.mainbag').viewScroller({
+          beforeChange: function() {
+            return false; // It means that views changing will be terminated
+          }
+        });
+
+     
+    
+
+      
+      
+
+  });
+</script>
+
+
+
+
+
+
+
   
 </body> 
 </html>
