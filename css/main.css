@@ -304,7 +304,7 @@ button:hover {
     .landing p::selection {
       color: #383838;
       background: white; }
-  .landing .landing-down-arrow {
+  .landing .landing-down-arrow svg {
     display: block;
     position: absolute;
     left: 0;
