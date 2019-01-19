@@ -311,7 +311,11 @@ button:hover {
     right: 0;
     bottom: 1%;
     text-align: center;
-    animation: pulse 1.5s infinite; }
+    width: 40px;
+    animation: pulse 1.5s infinite;
+    left: 0;
+    right: 0;
+    margin: auto; }
 
 @keyframes pulse {
   0% {
