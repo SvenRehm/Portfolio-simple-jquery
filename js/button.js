@@ -8,7 +8,7 @@ var landingContact= $(".btn-about-me, .btn-footer");
 var openContact =$(".menu-item-4 a");
 var openPortfolio =$(".menu-item-2");
 var scrolltoSkills =$(".menu-item-5 a");
-
+var scrollToHome =$(".menu-item-1");
 
 $.fn.slideFadeToggle  = function(speed, easing, callback) {
   return this.animate({opacity: 'toggle', height: 'toggle'}, speed, easing, callback);
@@ -95,6 +95,18 @@ openPortfolio.click(function(event){
 })
 scrolltoSkills.click(function(event){
   
+  button.toggleClass("opened");
+    listItems.toggleClass("list-showing");
+    $('.menu-overlay').toggleClass("closed");
+    imgCard.toggleClass("img-slideup")
+    $('.footer').toggleClass("hide");
+    $("#scroll").addClass("blur");
+    $('.landing').toggleClass("fadeout-landing");
+    imCardtext.removeClass("img-slideup");
+    $(".portfolio-heading").toggleClass("img-slideup");
+})
+
+scrollToHome.click(function(event){ 
   button.toggleClass("opened");
     listItems.toggleClass("list-showing");
     $('.menu-overlay').toggleClass("closed");
