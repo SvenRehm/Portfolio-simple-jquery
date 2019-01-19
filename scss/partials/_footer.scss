@@ -19,16 +19,26 @@
             animation-timing-function: ease-in-out;
             animation-fill-mode: forwards;
     }
-    .uparrow{
+    .downarrow{
        position: fixed;
-       right: 8%;
+       right: 9%;
        bottom: 7%;
-       //fill: white;
-       //background: black;
-       padding: 2px;
-       border: 1px solid  black ;
-       border-radius: 2px
     }
+   
+    .uparrow{
+        position: fixed;
+        right: 9%;
+        bottom: 7%;
+       // border: 1px solid  black ;
+        //fill: white;
+        //background: black;
+        //padding: 2px;
+        // border: 1px solid  black ;
+        //border-radius: 2px;
+        
+        border-bottom: 1px solid black;
+        
+     }
    
     
     h5{

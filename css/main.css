@@ -1039,13 +1039,15 @@ button:hover {
     animation-duration: 500ms;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards; }
+  .footer .downarrow {
+    position: fixed;
+    right: 9%;
+    bottom: 7%; }
   .footer .uparrow {
     position: fixed;
-    right: 8%;
+    right: 9%;
     bottom: 7%;
-    padding: 2px;
-    border: 1px solid  black;
-    border-radius: 2px; }
+    border-bottom: 1px solid black; }
   .footer h5 {
     grid-row: 4/span 1;
     grid-column: 1/-1;
