@@ -123,60 +123,7 @@
             background: white;
         }
       }
-      @-webkit-keyframes ani-mouse {
-          0% {
-          opacity: 1;
-          top: 29%;
-          }
-          15% {
-          opacity: 1;
-          top: 50%;
-          }
-          50% {
-          opacity: 0;
-          top: 50%;
-          }
-          100% {
-          opacity: 0;
-          top: 29%;
-          }
-      }
-      @-moz-keyframes ani-mouse {
-          0% {
-          opacity: 1;
-          top: 29%;
-          }
-          15% {
-          opacity: 1;
-          top: 50%;
-          }
-          50% {
-          opacity: 0;
-          top: 50%;
-          }
-          100% {
-          opacity: 0;
-          top: 29%;
-          }
-      }
-      @keyframes ani-mouse {
-          0% {
-          opacity: 1;
-          top: 29%;
-          }
-          15% {
-          opacity: 1;
-          top: 50%;
-          }
-          50% {
-          opacity: 0;
-          top: 50%;
-          }
-          100% {
-          opacity: 0;
-          top: 29%;
-          }
-      }
+     
       .landing-down-arrow{
         display: block;
         position: absolute;
@@ -184,9 +131,28 @@
         right: 0;
         bottom: 1%;
         text-align: center;
+        animation: pulse 1.5s infinite;
+        
+
       }
-           
-     
+      
+@keyframes pulse {
+    0% {
+        transform: scale(.8);
+        opacity:.8;
+    }
+    70% {
+        transform: scale(1);
+        opacity:1;
+        
+    }
+        100% {
+            transform: scale(.8);
+            opacity:.8;
+    
+    }
+}  
+
 @keyframes fadeInLanding{
     0%{
         
