@@ -1,29 +1,23 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "browser-sync start --server --files css/*.css"
-  },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "author": "Kevin Powell",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/kevin-powell/portfolio-with-css-grid/issues"
-  },
-  "homepage": "https://github.com/kevin-powell/portfolio-with-css-grid#readme",
-  "devDependencies": {
-    "browser-sync": "^2.26.3",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-sass": "^3.2.1"
-  },
-  "dependencies": {
-    "fullpage.js": "^3.0.4",
-    "jquery": "^3.3.1"
-  }
+   "name": "portfolio",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "scripts": {
+      "start": "browser-sync start --server --files css/*.css"
+   },
+   "repository": {
+      "type": "git",
+      "url": ""
+   },
+   "devDependencies": {
+      "browser-sync": "^2.26.3",
+      "gulp": "^3.9.1",
+      "gulp-autoprefixer": "^5.0.0",
+      "gulp-sass": "^3.2.1"
+   },
+   "dependencies": {
+      "fullpage.js": "^3.0.4",
+      "jquery": "^3.3.1"
+   }
 }
